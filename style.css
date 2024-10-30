@@ -1,0 +1,93 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+/* Секция для добавления навыка */
+#add-skill-section {
+    border-radius: 8px;
+}
+
+/* Список навыков */
+.skill {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.skill:hover {
+    transform: scale(1.02);
+}
+
+.skill h3 {
+    font-size: 1.25rem;
+    color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+/* Прогресс бар с Bootstrap */
+.progress {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #198754;
+    transition: width 0.4s ease;
+}
+
+/* Стили для уровней и задач */
+.level {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 4px solid #0d6efd;
+}
+
+.level h4 {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.task input[type="checkbox"] {
+    accent-color: #0d6efd;
+}
+
+.task span {
+    font-size: 1rem;
+    color: #495057;
+    flex: 1;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    #add-skill-section {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

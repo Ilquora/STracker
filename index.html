@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чек-лист навыков</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container my-4">
+        <h1 class="text-center mb-4">Чек-лист навыков</h1>
+
+        <div id="add-skill-section" class="input-group mb-3 shadow-sm">
+            <input type="text" id="skill-name" class="form-control" placeholder="Название навыка">
+            <button id="add-skill-button" class="btn btn-primary">Добавить навык</button>
+        </div>
+
+        <div id="skills-list" class="list-group"></div>
+    </div>
+
+    <div class="modal fade" id="addLevelTaskModal" tabindex="-1" aria-labelledby="addLevelTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addLevelTaskModalLabel">Добавить новый элемент</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="element-type" class="form-label">Тип элемента</label>
+                        <select id="element-type" class="form-select">
+                            <option value="level">Уровень</option>
+                            <option value="task">Задача</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="element-name" class="form-label">Название</label>
+                        <input type="text" id="element-name" class="form-control" placeholder="Введите название уровня или задачи">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" id="save-element-button">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./SkillTracker.js" type="module"></script>
+    <script src="./UI.js" type="module"></script>
+    <script src="./app.js" type="module"></script>
+</body>
+</html>
