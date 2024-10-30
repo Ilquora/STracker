@@ -4,7 +4,6 @@ export default class UI {
         this.skillsList = document.getElementById('skills-list');
     }
 
-    // Рендеринг всех навыков и их уровней/задач
     renderSkills() {
         console.log("Рендеринг навыков:", this.skillTracker.skills);
         this.skillsList.innerHTML = '';
