@@ -1,4 +1,4 @@
-/* Основные стили */
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -8,12 +8,10 @@ h1 {
     font-weight: bold;
 }
 
-/* Секция для добавления навыка */
 #add-skill-section {
     border-radius: 8px;
 }
 
-/* Список навыков */
 .skill {
     background-color: #ffffff;
     padding: 20px;
@@ -36,7 +34,7 @@ h1 {
     margin-bottom: 0.75rem;
 }
 
-/* Прогресс бар с Bootstrap */
+
 .progress {
     height: 10px;
     background-color: #e9ecef;
@@ -49,7 +47,7 @@ h1 {
     transition: width 0.4s ease;
 }
 
-/* Стили для уровней и задач */
+
 .level {
     padding: 10px;
     background-color: #f8f9fa;
@@ -81,7 +79,6 @@ h1 {
     flex: 1;
 }
 
-/* Адаптивные стили */
 @media (max-width: 600px) {
     #add-skill-section {
         flex-direction: column;
