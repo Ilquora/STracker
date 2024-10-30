@@ -4,7 +4,6 @@ export default class SkillTracker {
         this.loadFromLocalStorage();
     }
 
-    // Добавление нового навыка
     addSkill(skillName) {
         if (!skillName || typeof skillName !== 'string' || !skillName.trim()) {
             console.error("Некорректное название навыка.");
@@ -22,7 +21,7 @@ export default class SkillTracker {
         this.saveToLocalStorage();
     }
 
-    // Добавление уровня к существующему навыку
+   
     addLevel(skillName, levelName) {
         if (!skillName || !levelName) {
             console.error("Название навыка или уровня не может быть пустым.");
@@ -45,7 +44,7 @@ export default class SkillTracker {
         this.saveToLocalStorage();
     }
 
-    // Добавление задачи к уровню в навыке
+   
     addTask(skillName, levelName, taskName) {
         if (!skillName || !levelName || !taskName) {
             console.error("Название навыка, уровня или задачи не может быть пустым.");
@@ -65,7 +64,7 @@ export default class SkillTracker {
         this.saveToLocalStorage();
     }
 
-    // Отметка задачи как выполненной
+  
     completeTask(skillName, levelName, taskName) {
         const skill = this.findSkill(skillName);
         const level = skill ? this.findLevel(skill, levelName) : null;
@@ -76,14 +75,13 @@ export default class SkillTracker {
             return;
         }
 
-        task.completed = !task.completed; // Переключаем статус задачи
+        task.completed = !task.completed; /
         console.log(`Задача '${taskName}' изменена на '${task.completed ? 'выполнено' : 'не выполнено'}'.`);
         
-        this.updateSkillProgress(skill); // Обновляем прогресс навыка
+        this.updateSkillProgress(skill); 
         this.saveToLocalStorage();
     }
 
-    // Обновление прогресса навыка
     updateSkillProgress(skill) {
         if (!skill) return;
 
@@ -93,13 +91,13 @@ export default class SkillTracker {
         skill.progress = totalTasks ? Math.round((completedTasks / totalTasks) * 100) : 0;
     }
 
-    // Сохранение данных в localStorage
+
     saveToLocalStorage() {
         localStorage.setItem('skills', JSON.stringify(this.skills));
         console.log("Данные успешно сохранены в localStorage.");
     }
 
-    // Загрузка данных из localStorage
+   
     loadFromLocalStorage() {
         const savedSkills = JSON.parse(localStorage.getItem('skills'));
         if (Array.isArray(savedSkills)) {
@@ -110,7 +108,7 @@ export default class SkillTracker {
         }
     }
 
-    // Вспомогательные методы для поиска навыков, уровней и задач
+
     findSkill(skillName) {
         return this.skills.find(skill => skill.name === skillName.trim());
     }
